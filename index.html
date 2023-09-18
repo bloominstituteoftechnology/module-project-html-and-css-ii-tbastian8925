@@ -6,6 +6,101 @@
   <style>
     /* 👉 Task 1- Apply the reset found on this page: https://www.joshwcomeau.com/css/custom-css-reset/ */
 
+    *, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+#headerTop {
+  color: white;
+  background-color: violet;
+  padding: 1rem
+}
+
+.headDiv, .botHead {
+  display: inline-block;
+}
+
+span {
+  margin-right: 1rem;
+}
+
+#firstSpan {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#headerBottom {
+  border-bottom: 1px solid gray;
+  padding-bottom: 5px;
+}
+
+#comBut {
+  color: aquamarine;
+  background-color: black;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 7px;
+  margin-right: 9px;
+}
+
+#headerBottom button.active {
+  padding: 0;
+  border-bottom: 2px solid yellow;
+  background: none;
+  margin-right: 5px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.email > div {
+  display: inline-block;
+}
+
+.email {
+  padding: 5px;
+  padding-left: 8px;
+  border-bottom: 2px solid lightgray;
+}
+
+.email-name, .email-subject {
+  width: 35%;
+}
+
+.email-check, .email.date, .email-size {
+  width: 8%
+}
+
+.email:nth-child(2) {
+  font-weight: bold;
+}
+
   </style>
   <style>
     /* 👉 Task 2- Target the body element.
@@ -68,30 +163,30 @@
 
 <body>
   <div id="instructions">
-    <h1>HTML & CSS II</h1>
+   <!-- <h1>HTML & CSS II</h1>
     <p>Please load this file in VSCode and Chrome, and open the Elements tab, Sources sub-tab, in Chrome Dev Tools.</p>
     <p>Work through the challenges found inside both style tags in this document.</p>
     <p>You will find a screenshot of the end result inside the design folder.</p>
-    <p>You can now comment out the h1 and the p tags...</p>
+    <p>You can now comment out the h1 and the p tags...</p> -->
   </div>
   <div>
     <header>
       <div id="headerTop">
-        <div>
-          <span>Super Mail</span>
+        <div class="headDiv">
+          <span id="firstSpan">Super Mail</span>
           <span>Jess</span>
         </div>
-        <div>
+        <div class="headDiv">
           <input type="text" placeholder="Search Mail" />
         </div>
       </div>
       <div id="headerBottom">
-        <div>Compose</div>
-        <div>
-          <button>All mail</button>
-          <button>Unread</button>
-          <button>Pinned</button>
-          <button>VIPs</button>
+        <div id="comBut" class="botHead">Compose</div>
+        <div class="botHead">
+          <button class="botBut">All mail</button>
+          <button class="botBut">Unread</button>
+          <button class="botBut">Pinned</button>
+          <button class="botBut">VIPs</button>
         </div>
       </div>
     </header>
